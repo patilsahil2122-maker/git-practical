@@ -1,0 +1,19 @@
+name: Simple CI Pipeline
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Run CI Test
+        run: echo "CI Pipeline executed successfully"
+
+      - name: Display Repository Files
+        run: ls
